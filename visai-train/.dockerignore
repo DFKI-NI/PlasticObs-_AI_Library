@@ -1,0 +1,7 @@
+logs
+models
+optimare_slices_3200_480
+__pycache__
+Dockerfile.train
+.dockerignore
+.gitignore

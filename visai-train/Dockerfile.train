@@ -1,0 +1,35 @@
+# Base image
+FROM python:3.12.3-slim
+
+# Metadata as labels
+LABEL maintainer='Felix Becker' \
+      version='0.0.1'
+
+# Set the working directory in the container
+WORKDIR /train
+
+# Copy the current directory contents into the container at /train
+COPY . /train
+
+# Install any needed packages specified in requirements.txt
+# Create the models directory
+RUN mkdir -p ./models
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    python3-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN python3 -m pip install --upgrade pip
+# Upgrade pip and install dependencies
+RUN pip install --upgrade pip && \
+    pip3 install --no-cache-dir -r requirements.txt
+
+# Install PyTorch and torchvision
+RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# Run the application
+CMD ["python", "main.py"]
