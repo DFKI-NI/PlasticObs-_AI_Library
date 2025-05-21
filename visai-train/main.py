@@ -10,17 +10,17 @@ from PIL import Image
 # libraries
 import torch
 import torch.optim as optim
-
 import torch.utils
 from torch.utils.data import Dataset, DataLoader
-
 import torchvision.transforms.v2 as v2
 from torchvision import transforms
 
 from vae_model import Decoder, Encoder, VAE, vae_loss
 
+
 # set system settings
 logging.basicConfig(stream=sys.stdout, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 # Function to read .env file and set environment variables
 def load_env_file(file_path):
@@ -34,6 +34,7 @@ def load_env_file(file_path):
             if line.strip() and not line.startswith('#'):
                 key, value = line.strip().split('=', 1)
                 os.environ[key] = value
+
 
 # Load environment variables from .env file
 load_env_file('train.env')
@@ -124,7 +125,7 @@ def main():
 
     # instantiate optimizer and scheduler
     optimizer = optim.Adam(list(encoder.parameters()) + list(decoder.parameters()), lr=LR)
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="min", factor=0.1, patience=PATIENCE, verbose=True)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="min", factor=0.1, patience=PATIENCE)
 
     # initialize the best validation loss as infinity
     best_val_loss = float("inf")
@@ -175,6 +176,7 @@ def main():
     torch.save(vae.state_dict(), model_name)
     logging.info(f"Latest model saved at: {model_name}, with loss: {recon_loss}")
     logging.info(f"Best model saved at: {best_model_name}, with loss: {best_val_loss}")
-        
+
+ 
 if __name__=="__main__":
     main()

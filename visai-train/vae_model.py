@@ -33,6 +33,7 @@ class LogCoshLoss(nn.Module):
         ey_t = y_t - y_prime_t
         return torch.mean(torch.log(torch.cosh(ey_t + 1e-12)))
 
+
 def vae_gaussian_kl_loss(mu, logvar):
     """Calculate the kl loss of thew autoencoder
 
@@ -49,6 +50,7 @@ def vae_gaussian_kl_loss(mu, logvar):
     KLD = -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp(), dim=1)
     return KLD.mean()
 
+
 def reconstruction_loss(x_reconstructed, x):
     """Calculate the reconstruction loss
 
@@ -61,6 +63,7 @@ def reconstruction_loss(x_reconstructed, x):
     """
     bce_loss = LogCoshLoss() #nn.BCELoss()
     return bce_loss(x_reconstructed, x)
+
 
 def vae_loss(y_pred, y_true):
     """Calculate the losses for the VAE
@@ -76,6 +79,7 @@ def vae_loss(y_pred, y_true):
     recon_loss = reconstruction_loss(recon_x, y_true)
     kld_loss = vae_gaussian_kl_loss(mu, logvar)
     return (500 * recon_loss + kld_loss), 500*recon_loss, kld_loss
+
 
 # define a class for sampling
 class Sampling(nn.Module):
@@ -102,6 +106,7 @@ class Sampling(nn.Module):
         # apply the reparameterization trick to generate the samples in the
         # latent space
         return z_mean + torch.exp(0.5 * z_log_var) * epsilon
+
 
 # define the encoder
 class Encoder(nn.Module):
@@ -160,6 +165,7 @@ class Encoder(nn.Module):
         z = self.sampling(z_mean, z_log_var)
         return z_mean, z_log_var, z
 
+
 # define the decoder
 class Decoder(nn.Module):
     """The decoder class for an AutoEncoder
@@ -217,7 +223,8 @@ class Decoder(nn.Module):
         # activation to generate the final output
         x = torch.sigmoid(self.deconv3(x))
         return x
-    
+
+
 # define the vae class
 class VAE(nn.Module):
     """VAE Model
@@ -254,6 +261,7 @@ class VAE(nn.Module):
         # return the mean, log variance and the reconstructed image
         return z_mean, z_log_var, reconstruction
 
+
 def predict_single(model, test_image, DEVICE):
     """Predict one image w/ a VAE Model
 
@@ -277,6 +285,7 @@ def predict_single(model, test_image, DEVICE):
         pred = model.decoder(z.to(DEVICE)).detach().cpu().numpy()
     
     return pred
+
 
 # encoding and decoding with a given model on one (1) image
 def model_prediction(vae_model, image, threshold, img_shape, DEVICE):

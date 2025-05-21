@@ -22,4 +22,3 @@ services:
     volumes:
           # local_path:/path/inside/container
           - ./optimare_slices_3200_480:/train/optimare_slices_3200_480
-    #runtime: nvidia
