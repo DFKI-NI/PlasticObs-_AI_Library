@@ -1,0 +1,69 @@
+@startuml AI_Inference
+Actor User as user
+participant "GeoNode\nUI" as UI
+participant "GeoNode\nBackend" as Backend
+participant "AI API" as API
+
+activate UI
+user -> UI: Choose Raster Image
+user -> UI: Open AI Inference Tool
+UI -> Backend: Read OpenAPI
+activate Backend
+Backend -> Backend: Authorize user
+alt unauthorized
+Backend --> UI: Forbidden
+else authorized
+Backend -> API: Forward
+Backend <-- API: OpenAPI with model descriptions
+UI <-- Backend
+UI -> UI: Render Input Form
+
+UI -> Backend: Submit (Trigger AI Inference)
+Backend -> Backend: Already authorized
+Backend -> API: Forward
+
+activate API
+API -> API: Validate input
+API -> API: Create Job
+
+API -> API: Set Job Status to "running"
+Backend <-- API: JobId
+UI <-- Backend: JobId
+deactivate UI
+
+Backend -> Backend: Create Execution
+loop until Job Status == "finished"
+    Backend -> API: Get Job Status
+    Backend <-- API: Job Status
+end
+deactivate Backend
+
+activate Backend
+Backend <- API: Download Image via WMS
+Backend --> API: Serve Image
+API -> API: Predict litter assessement
+
+activate UI
+user -> UI: Job status list
+activate Backend
+UI -> Backend
+Backend -> Backend: Collect Job Status
+UI <-- Backend: Status list
+deactivate Backend
+user <-- UI
+deactivate UI
+
+API -> API: Set Job Status to "finished"
+activate Backend
+Backend <- API: Upload Results with georeference
+Backend <- API: Link result with input data
+deactivate Backend
+
+deactivate API
+deactivate Backend
+
+
+
+end
+
+@enduml

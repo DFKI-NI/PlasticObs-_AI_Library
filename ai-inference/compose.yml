@@ -1,0 +1,17 @@
+
+services:
+  ai-inference:
+    image: dfki/ai-reference:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./models:/app/models
+    networks:
+      - geonode_network
+
+networks:
+  geonode_network:
+    external:
+      true

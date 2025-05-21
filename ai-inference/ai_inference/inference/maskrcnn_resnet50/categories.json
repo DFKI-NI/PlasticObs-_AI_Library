@@ -1,0 +1,249 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Cup-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 2,
+            "name": "Can-Metal-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 3,
+            "name": "Bottle-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 4,
+            "name": "Cap-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 5,
+            "name": "Lid-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 6,
+            "name": "Lid-Metal-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 7,
+            "name": "Piece-Lumber-Construction-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 8,
+            "name": "Piece-Organic-Natural-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 9,
+            "name": "Container-Plastic-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 10,
+            "name": "Tray-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 11,
+            "name": "Bowl-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 12,
+            "name": "Wrapper-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 13,
+            "name": "Tetra_Pak-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 14,
+            "name": "Bags_transparent-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 15,
+            "name": "Bags_non_transparent-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 16,
+            "name": "Bottle-Plastic-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 17,
+            "name": "Piece-Rubber-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 18,
+            "name": "Piece-Cardboard-Logistic_and_Transport-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 19,
+            "name": "Medical_package-Plastic-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 20,
+            "name": "Pipe-Plastic-Construction-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 21,
+            "name": "Furniture-Lumber-Other-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 22,
+            "name": "Piece-Glas-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 23,
+            "name": "Piece-Ceramic-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 24,
+            "name": "Trouser-Textiles-Clothing-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 25,
+            "name": "Textiles-Textiles-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 26,
+            "name": "Shoe-Textiles-Clothing-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 27,
+            "name": "Foam-Plastic-Logistic_and_Transport-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 28,
+            "name": "Piece-Plastic-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 29,
+            "name": "Box-Cardboard-Logistic_and_Transport-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 30,
+            "name": "Straw-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 31,
+            "name": "Other_Net-Plastic-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 32,
+            "name": "Rope-Unknown-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 33,
+            "name": "Food-Organic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 34,
+            "name": "Others-Others-Others-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 35,
+            "name": "Bottle-Glas-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 36,
+            "name": "Bags_non_transparent-Plastic-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 37,
+            "name": "Bags_transparent-Plastic-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 38,
+            "name": "Canister-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 39,
+            "name": "Box-Cardboard-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 40,
+            "name": "Piece-Paper-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 41,
+            "name": "Cup-Cardboard-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 42,
+            "name": "Bottle-Metal-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 43,
+            "name": "Piece-Metal-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 44,
+            "name": "Container-Plastic-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 45,
+            "name": "Fabric-Plastic-Unkwown-Unkown",
+            "supercategory": ""
+        },
+        {
+            "id": 46,
+            "name": "Sponge-Plastic-Cleaning_and_Cosmetic-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 47,
+            "name": "Tray-Cardboard-Food_and_Drink-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 48,
+            "name": "Coal-Others-Unknown-Unknown",
+            "supercategory": ""
+        },
+        {
+            "id": 49,
+            "name": "Others-Others-Unknown-Unknown",
+            "supercategory": ""
+        }
+    ]
+}

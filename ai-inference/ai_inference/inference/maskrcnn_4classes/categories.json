@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "1_Plastic",
+            "supercategory": ""
+        },
+        {
+            "id": 2,
+            "name": "7_Metal",
+            "supercategory": ""
+        },
+        {
+            "id": 3,
+            "name": "300_Others",
+            "supercategory": ""
+        },
+        {
+            "id": 4,
+            "name": "5_Paper",
+            "supercategory": ""
+        }
+    ]
+}

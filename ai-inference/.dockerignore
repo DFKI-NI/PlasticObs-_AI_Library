@@ -1,0 +1,6 @@
+Dockerfile
+*.eggs
+*.yaml
+__pycache__
+docs
+.*
