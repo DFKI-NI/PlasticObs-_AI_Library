@@ -6,7 +6,7 @@ from multiprocessing import freeze_support
 from sklearn.model_selection import train_test_split
 
 import torch
-from torch.cuda.amp import GradScaler
+from torch.amp import GradScaler
 from torch.utils.data import Subset
 from torch.utils.data import DataLoader
 from torchvision import transforms
@@ -139,7 +139,7 @@ def main():
     root = 'D:/DATA/PlasticObsPlus/EOIR_AI/Spot_Multispectral/Spot_0.00898'
     annFile = 'D:/DATA/PlasticObsPlus/EOIR_AI/Spot_Multispectral/annotations/annotations_20m/instances_default.json'
     
-    scaler = GradScaler()
+    scaler = GradScaler(device='cuda')
     
     # load labels
     with open(annFile) as f:

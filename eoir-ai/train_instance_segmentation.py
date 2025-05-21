@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from torch.utils.data import Subset
 
 import torch
-from torch.cuda.amp import GradScaler
+from torch.amp import GradScaler
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 from torchvision import transforms as T
@@ -216,7 +216,7 @@ def main():
     # save model
     os.makedirs(model_dir, exist_ok=True)
     
-    scaler = GradScaler()
+    scaler = GradScaler(device='cuda')
 
     # load labels
     with open(annFile) as f:
