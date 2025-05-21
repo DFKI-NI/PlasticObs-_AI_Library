@@ -1,0 +1,32 @@
+@startuml Medusa
+participant "VIS Line Scanner" as VIS
+participant "VIS AI" as VISAI
+participant "Anomaly Receiver" as AR
+participant "EOIR" as EOIR
+
+activate VIS
+VIS -> VISAI: Send Line Scans
+
+
+activate VISAI
+loop until time == "1s"
+    VISAI -> VISAI: Stack Lines to image
+end
+
+VIS <-- VISAI: Await new data\nRestart the loop
+VISAI -> VISAI: Process image data
+VISAI -> AR: Send Detected Anomalies
+deactivate VISAI
+
+activate AR
+AR -> AR: Ask Operator for EOIR permission
+AR -> AR: Calculate Geo Pointing
+AR -> EOIR: Send Geo Positions
+deactivate AR
+
+activate EOIR
+EOIR -> EOIR: Move to position (make Video)
+EOIR -> EOIR: Save video data
+deactivate EOIR
+
+deactivate VIS

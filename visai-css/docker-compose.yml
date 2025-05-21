@@ -1,0 +1,25 @@
+services:
+  my_service:
+    build:
+      context: .
+      dockerfile: Dockerfile.udp
+    env_file:
+      - host_ip.env
+    ports:
+      - "${LOCAL_PORT}:${LOCAL_PORT}"
+    command: ["python3", "main_thread.py"]
+    deploy:
+      resources:
+        limits:
+          memory: "1g"
+    ipc: host
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      stack:
+        soft: 67108864
+        hard: 67108864
+    network_mode: host
+    restart: always
+

@@ -1,0 +1,26 @@
+# Base image
+ARG tag=24.05
+FROM nvcr.io/nvidia/pytorch:${tag}-py3
+
+ARG LOCAL_PORT
+ENV LOCAL_PORT=${LOCAL_PORT}
+EXPOSE ${LOCAL_PORT}
+
+# Metadata as labels
+LABEL maintainer='Felix Becker' \
+      version='0.0.1'
+
+# Set the working directory and copy the application
+WORKDIR /visai-optimare
+COPY . .
+
+# Install dependencies and create logs directory in one RUN to minimize layers
+RUN mkdir -p ./logs && \
+    pip install --upgrade pip && \
+    pip3 install --no-cache-dir -r requirements.txt
+
+# get port from host_ip.env file
+EXPOSE ${LOCAL_PORT}
+
+# Set the default command to run when the container starts
+CMD ["python3", "main_thread.py"]

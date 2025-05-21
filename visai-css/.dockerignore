@@ -1,0 +1,11 @@
+.dockerignore
+.git*
+.vscode
+Dockerfile.udp
+__pycache__
+Notebooks
+env_udp
+images
+test*
+logs
+Image_viewer
