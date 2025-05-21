@@ -64,10 +64,10 @@ The **default** network_mode is:
 network_mode: bridge
 ```
 
-To build and run the docker, you can use this command
+To build the docker, you can use this command
 
 ```bash
-docker compose up --build
+docker compose --env-file host_ip.env build
 ```
 
 To run the docker image, you can use
