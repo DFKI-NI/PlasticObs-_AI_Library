@@ -1,5 +1,6 @@
 cpu_env/
-
+logs/
+models/
 Notebooks
 results/
 results_proba_thres/
