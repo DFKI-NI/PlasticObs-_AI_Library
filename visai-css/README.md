@@ -218,6 +218,14 @@ AnomalySender class
 * `get_anomalies_from_medoids`: handles the the conversion from medoids list to Anomalies
 * `get_prio`: Calculate priority (0 or 1 is highest) based on the position and probapility
 
+## License
+
+The example data and code in this repository is released under the BSD-3 license.
+
+## Funding
+
+Funded by the German Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection (BMUV) based on a resolution of the German Bundestag (Grant No. 67KI21014A).
+
 ## Authors and acknowledgment
 
 **Felix Becker / DFKI** - Development and Documentation
@@ -225,7 +233,3 @@ AnomalySender class
 Special thanks to:
 
 * **Sören Schweigert / Optimare** - for providing test programs in java
-
-## License
-
-Open Source (*tbd*)

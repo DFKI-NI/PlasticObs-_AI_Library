@@ -49,6 +49,14 @@ As mentioned before we take the databases form previous flights and load them wi
 ![Play Video when anomaly is found](./docs/feedback_loop_video_player.png)
 *The Feedback Loop tool plays the EOIR video from the detected anomaly*
 
+## License
+
+The example data and code in this repository is released under the BSD-3 license.
+
+## Funding
+
+Funded by the German Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection (BMUV) based on a resolution of the German Bundestag (Grant No. 67KI21014A).
+
 ## Authors
 
 Felix Becker, DFKI

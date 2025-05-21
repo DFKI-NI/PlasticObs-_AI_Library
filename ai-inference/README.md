@@ -85,6 +85,14 @@ Use either `/jobs/` or `/jobs/<job_id>` to get information about the job status.
 
 ![Setup Overview](./docs/img/trigger-ai-inference/AI_Inference.png "Calling an AI Inference")
 
+## License
+
+Please note that this component is licensed separately under the **MIT License**. Be sure to review the respective license files for details.
+
+## Funding
+
+Funded by the German Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection (BMUV) based on a resolution of the German Bundestag (Grant No. 67KI21014A).
+
 ## Authors
 
 Felix Becker <felix.becker@dfki.de>
