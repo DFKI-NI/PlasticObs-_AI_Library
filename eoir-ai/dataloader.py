@@ -84,6 +84,7 @@ class COCODataset(Dataset):
     def __len__(self):
         return len(self.ids)
 
+
 def resize(img, target, size=(1000, 1000)):
     """Resize images and targets to match input sizes for the model
 
@@ -120,6 +121,7 @@ def resize(img, target, size=(1000, 1000)):
 
     return img, target
 
+
 def get_transform(train):
     """Define a transformation for image data
 
@@ -132,6 +134,7 @@ def get_transform(train):
     transforms = []
     transforms.append(T.ToTensor())
     return T.Compose(transforms)
+
 
 def transform(img, target):
     """Transform the data by Flipping it randomly
@@ -150,6 +153,7 @@ def transform(img, target):
         target["boxes"][:, [0, 2]] = img_width - target["boxes"][:, [2, 0]]
         target["masks"] = target["masks"].flip(-1)
     return img, target
+
 
 def collate_fn(batch):
     """Custom collate function for data loading.

@@ -2,6 +2,7 @@
 from PIL import Image
 from torchvision import transforms as T
 
+
 def resize(img, size=(1000, 1000)):
     """Resize an image
 
@@ -16,6 +17,7 @@ def resize(img, size=(1000, 1000)):
     img = img.resize(size, Image.Resampling.BILINEAR)
 
     return img
+
 
 def get_transform(train):
     """Function to create transform object

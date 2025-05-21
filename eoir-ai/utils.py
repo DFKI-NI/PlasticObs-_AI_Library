@@ -10,7 +10,7 @@ from torchvision.ops import box_iou
 from torchvision.models.detection.mask_rcnn import MaskRCNNPredictor
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 from torchvision.models.detection import maskrcnn_resnet50_fpn, MaskRCNN_ResNet50_FPN_Weights
-from typing import List, Tuple, Dict, Any, Optional
+from typing import List, Tuple, Any
 
 
 def evaluate(model: torch.nn.Module, data_loader: DataLoader, device: torch.device) -> float:

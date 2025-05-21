@@ -8,6 +8,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms as T
 import torchvision.transforms.functional as F
 
+
 # create data loader
 class COCODatasetMultispectral(Dataset):
     def __init__(self, root, annFile, transforms=None, resize=None):
@@ -71,7 +72,8 @@ class COCODatasetMultispectral(Dataset):
 
     def __len__(self):
         return len(self.ids)
-    
+
+
 def handle_nans(img):
     """handles tiff images with NaNs and replaces them with 0.0
 

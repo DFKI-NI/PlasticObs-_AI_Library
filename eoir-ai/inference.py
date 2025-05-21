@@ -47,7 +47,6 @@ class MaskRcnnInference():
         self.model = model.eval()
         self.model.to(self.DEVICE)
 
-
     def do_predict(self, input_file):
         """DEPRECATED: A method to do predictions, 
 

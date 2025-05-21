@@ -96,6 +96,7 @@ class COCODataset(Dataset):
     def __len__(self):
         return len(self.ids)
 
+
 def resize(img, target, size=(1000, 1000)):
     """Resize images and targets to match input sizes for the model
 
@@ -129,6 +130,7 @@ def resize(img, target, size=(1000, 1000)):
 
     return img, target
 
+
 def get_transform(train):
     """Define a transformation for image data
 
@@ -141,6 +143,7 @@ def get_transform(train):
     transforms = []
     transforms.append(T.ToTensor())
     return T.Compose(transforms)
+
 
 def transform(img, target):
     """Transform the data by Flipping it randomly
@@ -160,6 +163,7 @@ def transform(img, target):
         target["masks"] = target["masks"].flip(-1)
     return img, target
 
+
 def collate_fn(batch):
     """Custom collate function for data loading.
 
@@ -171,6 +175,7 @@ def collate_fn(batch):
             the respective elements from each sample in the batch
     """
     return tuple(zip(*batch))
+
 
 # Initialize model with pre-trained weights
 def initialize_model(num_classes, weights, hidden_layer):
@@ -311,6 +316,7 @@ def main():
     torch.save(model.state_dict(), model_name)
     print("Model saved successfully!")
     print(f"Best Epoch was: {best_epoch} with validation loss: {best_loss}")
+
 
 if __name__ == '__main__':
     freeze_support()

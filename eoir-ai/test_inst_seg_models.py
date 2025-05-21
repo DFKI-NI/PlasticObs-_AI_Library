@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+from typing import Tuple
 from multiprocessing import freeze_support
 
 # libraries
@@ -25,6 +26,7 @@ def calculate_iou(boxes1, boxes2):
         torch.Tensor: IoU matrix.
     """
     return box_iou(boxes1, boxes2)
+
 
 # Function to calculate precision, recall, and F1 score
 def calculate_metrics(pred_boxes: torch.Tensor, gt_boxes: torch.Tensor, iou_threshold: float = 0.5) -> Tuple[float, float, float]:
@@ -53,6 +55,7 @@ def calculate_metrics(pred_boxes: torch.Tensor, gt_boxes: torch.Tensor, iou_thre
     f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
     
     return precision, recall, f1_score
+
 
 def main(model_path: str, annFile: str, root: str, num_classes: int, device: torch.device):
     """Main loop for running the test on the model
@@ -102,6 +105,7 @@ def main(model_path: str, annFile: str, root: str, num_classes: int, device: tor
     print(f"Average Precision: {avg_precision:.4f},\
         Average Recall: {avg_recall:.4f},\
         Average F1 Score: {avg_f1_score:.4f}")
+
 
 if __name__ == '__main__':
     freeze_support()

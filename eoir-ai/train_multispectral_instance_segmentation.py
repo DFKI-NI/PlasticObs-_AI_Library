@@ -18,7 +18,6 @@ from torchvision.models.detection import maskrcnn_resnet50_fpn, MaskRCNN_ResNet5
 from utils import test, validate
 from multispectral_dataloader import COCODatasetMultispectral
 
-# TODO: Add logger for the training
 
 # Define a custom transform to include ToTensor and Normalize
 class CustomGeneralizedRCNNTransform(GeneralizedRCNNTransform):
@@ -89,6 +88,7 @@ class CustomTransform:
 def collate_fn(batch):
     return tuple(zip(*batch))
 
+
 def initialize_model(num_classes, weights, hidden_layer, num_channels):
     """Initialize a model structure
 
@@ -132,6 +132,7 @@ def initialize_model(num_classes, weights, hidden_layer, num_channels):
     )
     
     return model
+
 
 def main():
     # select files
@@ -249,6 +250,7 @@ def main():
     torch.save(model.state_dict(), model_name)
     print("Model saved successfully!")
     print(f"Best Epoch was: {best_epoch} with validation loss: {best_loss}")
+
 
 if __name__ == '__main__':
     freeze_support()
