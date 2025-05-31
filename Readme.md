@@ -1,6 +1,6 @@
 # PlasticObs+ AI Library
 
-The AI libary (german: KI-Bibliothek) is a collection of train, inference and use cases for the AI models that have been developed in the PlasticObsplus (PO+) project.
+The AI libary (german: KI-Bibliothek) is a collection of train, inference and use cases for the AI models that have been developed in the PlasticObs_plus (PO+) project.
 
 The BMUV-funded PlasticObs_plus project (2022-2025) developed an AI-based remote sensing system for detecting plastic waste in waters. It combines RGB line scanning with real-time AI (VIS AI) and a multispectral high-resolution sensor (EOIR AI) to identify plastic from the air. VIS AI analyzes data in real-time, prioritizing suspicious areas, while EOIR AI performs detailed segmentation. Tests in Brazil, coastal regions, and festivals confirmed its adaptability. The open-source GeoNode platform integrates these models, enabling worldwide use and regional customization. The consortium (DFKI, everwave, Jade University, Optimare) provided interdisciplinary expertise for practical implementation. All models and datasets are publicly available to authorities, NGOs, and researchers. The system bridges satellite overview imaging and drone-based detailed analysis, creating efficient monitoring strategies for maritime regions.
 Funding Reference 67KI21014A
