@@ -26,7 +26,7 @@ Check out the [Add new AI inference docu](./Add_new_ai_inference.md).
 
 ### Get the Models
 
-[Download the models](https://cloud.dfki.de/owncloud/index.php/s/rQWsqfktx2drabb) and copy them to `./models`.
+[Download the models](https://cloud.dfki.de/owncloud/index.php/s/EDq2BRJg5TdNrqf) and copy them to `./models`.
 
 ### Start the AI-Inference REST API
 
